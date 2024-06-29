@@ -38,28 +38,54 @@
             position: absolute;
             background: rgba(0, 150, 255, 0.7);
             border-radius: 50%;
+            width: 5px;
+            height: 5px;
             animation: rotate 10s linear infinite;
         }
 
         @keyframes rotate {
             0% {
-                transform: translate(-50%, -50%) rotate(0deg);
+                transform: rotate(0deg) translateX(150px) rotate(0deg);
             }
             100% {
-                transform: translate(-50%, -50%) rotate(360deg);
+                transform: rotate(360deg) translateX(150px) rotate(-360deg);
             }
+        }
+
+        /* Add additional particles with variations */
+        .particle:nth-child(2) {
+            animation-duration: 12s;
+            width: 4px;
+            height: 4px;
+        }
+
+        .particle:nth-child(3) {
+            animation-duration: 8s;
+            width: 6px;
+            height: 6px;
+        }
+
+        .particle:nth-child(4) {
+            animation-duration: 14s;
+            width: 3px;
+            height: 3px;
+        }
+
+        .particle:nth-child(5) {
+            animation-duration: 10s;
+            width: 5px;
+            height: 5px;
         }
     </style>
 </head>
 
 <body>
     <div class="particles">
-        <!-- Add multiple particles with varying sizes and positions -->
-        <div class="particle" style="width: 5px; height: 5px; top: 50%; left: 60%; animation-duration: 8s;"></div>
-        <div class="particle" style="width: 4px; height: 4px; top: 48%; left: 40%; animation-duration: 6s;"></div>
-        <div class="particle" style="width: 6px; height: 6px; top: 52%; left: 50%; animation-duration: 10s;"></div>
-        <div class="particle" style="width: 3px; height: 3px; top: 45%; left: 55%; animation-duration: 7s;"></div>
-        <div class="particle" style="width: 5px; height: 5px; top: 55%; left: 45%; animation-duration: 9s;"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
         <!-- Add more particles as needed -->
     </div>
 
