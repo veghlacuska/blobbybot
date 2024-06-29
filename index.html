@@ -10,26 +10,31 @@
       overflow: hidden;
       background-color: #000;
     }
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
     .particle {
       position: absolute;
-      width: 2px;
-      height: 2px;
+      width: 4px;
+      height: 4px;
       background-color: #00f;
       border-radius: 50%;
       animation: rotateParticle linear infinite;
     }
     @keyframes rotateParticle {
-      from { transform: rotate(0deg) translate(150px) rotate(0deg); }
-      to { transform: rotate(360deg) translate(150px) rotate(-360deg); }
+      from { transform: rotate(0deg) translate(100px) rotate(0deg); }
+      to { transform: rotate(360deg) translate(100px) rotate(-360deg); }
     }
   </style>
 </head>
 <body>
-  <!-- Adjust the number and position of particles as needed -->
-  <div class="particle" style="top: 50%; left: 50%;"></div>
-  <div class="particle" style="top: 40%; left: 40%;"></div>
-  <div class="particle" style="top: 60%; left: 60%;"></div>
-  <div class="particle" style="top: 30%; left: 70%;"></div>
-  <div class="particle" style="top: 70%; left: 30%;"></div>
+  <div class="container">
+    <div class="particle" style="top: 50%; left: calc(50% - 50px);"></div>
+    <div class="particle" style="top: calc(50% - 50px); left: 50%; animation-delay: -2s;"></div>
+    <div class="particle" style="top: calc(50% + 50px); left: 50%; animation-delay: -1s;"></div>
+    <div class="particle" style="top: 50%; left: calc(50% + 50px); animation-delay: -3s;"></div>
+  </div>
 </body>
 </html>
