@@ -21,20 +21,25 @@
       height: 4px;
       background-color: #00f;
       border-radius: 50%;
-      animation: rotateParticle linear infinite;
+      animation: rotateParticle 4s linear infinite;
     }
     @keyframes rotateParticle {
       from { transform: rotate(0deg) translate(100px) rotate(0deg); }
       to { transform: rotate(360deg) translate(100px) rotate(-360deg); }
     }
+    /* Adjust particle positions */
+    .particle:nth-child(1) { top: 50%; left: calc(50% - 100px); }
+    .particle:nth-child(2) { top: calc(50% - 100px); left: 50%; animation-delay: -2s; }
+    .particle:nth-child(3) { top: calc(50% + 100px); left: 50%; animation-delay: -1s; }
+    .particle:nth-child(4) { top: 50%; left: calc(50% + 100px); animation-delay: -3s; }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="particle" style="top: 50%; left: calc(50% - 50px);"></div>
-    <div class="particle" style="top: calc(50% - 50px); left: 50%; animation-delay: -2s;"></div>
-    <div class="particle" style="top: calc(50% + 50px); left: 50%; animation-delay: -1s;"></div>
-    <div class="particle" style="top: 50%; left: calc(50% + 50px); animation-delay: -3s;"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
   </div>
 </body>
 </html>
